@@ -1,4 +1,18 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
-public class Pilot extends Person{
+import com.zipcodewilmington.froilansfarm.Interfaces.Ride.Aircraft;
+import com.zipcodewilmington.froilansfarm.Interfaces.Ride.Flyer;
+
+public class Pilot extends Person implements Flyer {
+    public void pilot() {
+
+    }
+
+    public void mount(Aircraft type) {
+
+    }
+
+    public void dismount(Aircraft type) {
+
+    }
 }

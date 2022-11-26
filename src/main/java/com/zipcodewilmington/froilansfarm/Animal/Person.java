@@ -1,4 +1,13 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
-public class Person extends Animal{
+import com.zipcodewilmington.froilansfarm.Interfaces.Eat.Eater;
+import com.zipcodewilmington.froilansfarm.Interfaces.Eat.Edible;
+
+public class Person extends Animal implements Eater<Edible> {
+    public void eat(Edible type) {
+    }
+
+    public void hasEaten() {
+
+    }
 }

@@ -1,4 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Crop;
 
-public class Tomato implements vegetable{
+import com.zipcodewilmington.froilansfarm.Interfaces.Eat.Vegetable;
+
+public class Tomato implements Vegetable{
 }

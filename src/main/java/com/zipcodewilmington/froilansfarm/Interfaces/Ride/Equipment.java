@@ -1,4 +1,8 @@
 package com.zipcodewilmington.froilansfarm.Interfaces.Ride;
 
-public interface Equipment <T> extends Ridable <T>{
+import com.zipcodewilmington.froilansfarm.Vehicle.Tractor;
+
+public interface Equipment <T extends Rider> extends Rideable<T>{
+
+    public void operate();
 }

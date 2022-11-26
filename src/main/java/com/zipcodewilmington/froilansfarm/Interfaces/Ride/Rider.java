@@ -1,4 +1,8 @@
 package com.zipcodewilmington.froilansfarm.Interfaces.Ride;
 
-public class Rider <T> extends Rideable<T>{
+public interface Rider <T extends Rideable>{
+
+    public void mount(T type);
+
+    public void dismount(T type);
 }
