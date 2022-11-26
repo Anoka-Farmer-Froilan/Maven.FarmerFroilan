@@ -1,4 +1,7 @@
 package com.zipcodewilmington.froilansfarm.StorageClasses.Farm;
 
-public class Stable extends Shelter<Horse>{
+import com.zipcodewilmington.froilansfarm.Animal.Horse;
+import com.zipcodewilmington.froilansfarm.StorageClasses.Shelter;
+
+public class Stable extends Shelter<Horse> {
 }
