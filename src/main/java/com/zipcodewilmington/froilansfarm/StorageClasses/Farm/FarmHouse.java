@@ -7,5 +7,7 @@ import com.zipcodewilmington.froilansfarm.StorageClasses.Shelter;
 public class FarmHouse extends Shelter<Person> {
         public FarmHouse(){}
 
-    public void feed(Person person, Edible edible){}
+    public void feed(Person person, Edible edible){
+
+    }
 }
