@@ -9,7 +9,4 @@ public class Chicken extends Animal implements Eater<Vegetable> {
 
     }
 
-    public void hasEaten() {
-
-    }
 }
