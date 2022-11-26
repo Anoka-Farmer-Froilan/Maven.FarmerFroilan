@@ -1,4 +1,7 @@
 package com.zipcodewilmington.froilansfarm.StorageClasses.Farm;
 
-public class Farm {
+import com.zipcodewilmington.froilansfarm.StorageClasses.Field.Field;
+
+public class Farm{
+
 }
