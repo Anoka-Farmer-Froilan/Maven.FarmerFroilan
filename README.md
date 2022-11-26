@@ -4,6 +4,13 @@
 * **Prerequesites:** A `UML` approved by an instructor.
 
 
+# WorkPlan:
+* Elija: Crops/Plants
+* Emory: Storage Classes/Interfaces
+* T: Animals
+* Yingjie: Vehicles
+
+
 # Setting the Plot...
 
 * Consider a system in which
