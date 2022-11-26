@@ -1,5 +1,10 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
-public class Tractor extends FarmVehicle{
+import com.zipcodewilmington.froilansfarm.Interfaces.Ride.Rideable;
 
+public class Tractor extends FarmVehicle implements Rideable {
+
+    public boolean mounted() {
+        return false;
+    }
 }
