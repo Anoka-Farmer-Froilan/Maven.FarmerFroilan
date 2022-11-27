@@ -3,14 +3,22 @@ package com.zipcodewilmington.froilansfarm.Vehicle;
 import com.zipcodewilmington.froilansfarm.Crop.Crop;
 import com.zipcodewilmington.froilansfarm.Interfaces.Ride.Equipment;
 import com.zipcodewilmington.froilansfarm.Interfaces.Ride.Rideable;
+import com.zipcodewilmington.froilansfarm.StorageClasses.Farm.Farm;
 
-public class Tractor extends FarmVehicle{
+public class Tractor implements FarmVehicle, Rideable{
 
     public boolean mounted() {
         return false;
     }
-    public void harvest(Crop crop1){
 
+    //Tractor can harvest a Crop
+    public boolean harvest(){
+        return false;
+    }
+
+    // Tractor is a FarmVehicle, Override the methods from FarmWehicle;
+    public boolean operate(Farm farm1){
+        return false;
     }
 
 }
