@@ -5,7 +5,7 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Ride.Equipment;
 import com.zipcodewilmington.froilansfarm.Interfaces.Ride.Rideable;
 import com.zipcodewilmington.froilansfarm.StorageClasses.Farm.Farm;
 
-public class Tractor implements FarmVehicle, Rideable{
+public class Tractor extends FarmVehicle implements Rideable{
 
     public boolean mounted() {
         return false;
