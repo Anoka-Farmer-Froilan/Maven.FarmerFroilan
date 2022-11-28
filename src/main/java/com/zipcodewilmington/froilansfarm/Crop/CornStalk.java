@@ -1,4 +1,14 @@
 package com.zipcodewilmington.froilansfarm.Crop;
 
-public class CornStalk extends Crop<EarCorn>{
+import com.zipcodewilmington.froilansfarm.Interfaces.Eat.Edible;
+
+public class CornStalk extends Crop{
+    public EarCorn yeild() {
+        if(isHasBeenFertilized()==true && isHasBeenHarvested()==false){
+            setHasBeenFertilized(true);
+            return new EarCorn();
+        } else {
+            return null;
+        }
+    }
 }

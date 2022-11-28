@@ -1,4 +1,4 @@
 package com.zipcodewilmington.froilansfarm.WeeklyFarmTest;
 
-public class TudesdayTest {
+public class TuesdayTest {
 }
