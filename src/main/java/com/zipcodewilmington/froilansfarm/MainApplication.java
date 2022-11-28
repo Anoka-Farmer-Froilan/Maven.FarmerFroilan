@@ -23,13 +23,16 @@ public class MainApplication {
     public static void main(String[] arg){
         Farm newFarm = new Farm();
         Farmer newFarmer = new Farmer();
+//Froilan, a Farmer has a Farm
+        newFarmer.addFarm(newFarm);
+        newFarmer.setName("Froilan");
 
-//        Froilan, a Farmer has a Farm consisting of
+//       a Farm consisting of
 //        1 Field of 5 CropRow.
 //                Row 1 has Corn
 //        Row 2 has Tomato
 //        Row 3 and beyond grows arbitrary vegetation.
-        newFarmer.setName("Froilan");
+
         Field newField = new Field();
         newField.addCropRow(new CornStalk());
         newField.addCropRow(new TomatoPlant());
