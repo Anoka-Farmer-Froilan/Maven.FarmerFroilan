@@ -1,12 +1,11 @@
 package com.zipcodewilmington.froilansfarm.Interfaces;
 
+import com.zipcodewilmington.froilansfarm.Animal.Animal;
 import com.zipcodewilmington.froilansfarm.Interfaces.Eat.Edible;
 
-public class Produce{
+public class Produce extends Animal {
 
-
-
-   private boolean hasBeenFertilized;
+    private boolean hasBeenFertilized;
    private boolean hasBeenHarvested;
 
     public Produce() {
@@ -30,7 +29,7 @@ public class Produce{
         this.hasBeenHarvested = hasBeenHarvested;
     }
 
-    public Edible yeild(){
-        return new Edible();
+    public <T> Object  yield(){
+        return null;
     }
 }

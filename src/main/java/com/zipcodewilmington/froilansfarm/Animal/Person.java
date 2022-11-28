@@ -3,7 +3,7 @@ package com.zipcodewilmington.froilansfarm.Animal;
 import com.zipcodewilmington.froilansfarm.Interfaces.Eat.Eater;
 import com.zipcodewilmington.froilansfarm.Interfaces.Eat.Edible;
 
-public abstract class Person extends Animal implements Eater{
+public abstract class Person extends Animal{
     private String name;
 
     public Person(String name) {

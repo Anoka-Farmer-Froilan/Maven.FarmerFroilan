@@ -5,7 +5,7 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 
 public class Crop extends Produce {
 
-    public Edible yeild() {
+    public Edible yield() {
         if(isHasBeenFertilized()==true && isHasBeenHarvested()==false){
             setHasBeenFertilized(true);
              return new Edible();
