@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
+import Food.Egg;
 import com.zipcodewilmington.froilansfarm.Animal.Chicken;
 import com.zipcodewilmington.froilansfarm.Animal.Farmer;
 import com.zipcodewilmington.froilansfarm.Animal.Horse;
@@ -18,12 +19,15 @@ import com.zipcodewilmington.froilansfarm.Vehicle.FarmVehicle;
  * Created by leon on 2/26/18.
  */
 public class MainApplication {
-    public static void main(String[] arg){
+    public static void main(String[] arg) {
+    }
+     public static Farmer plot(){
         Farm newFarm = new Farm();
         Farmer newFarmer = new Farmer();
 //Froilan, a Farmer has a Farm
-        newFarmer.addFarm(newFarm);
+        newFarmer.setNewFarm(newFarm);
         newFarmer.setName("Froilan");
+
 
 //       a Farm consisting of
 //        1 Field of 5 CropRow.
@@ -60,6 +64,13 @@ public class MainApplication {
         coop1.addChicken(new Chicken());
         coop2.addChicken(new Chicken());
         coop3.addChicken(new Chicken());
+        coop1.addEgg(new Egg());
+        coop1.addEgg(new Egg());
+        coop1.addEgg(new Egg());
+        coop1.addEgg(new Egg());
+        coop1.addEgg(new Egg());
+        coop1.addEgg(new Egg());
+        coop1.addEgg(new Egg());
 
         //add chickenCoop to the farm
         newFarm.addChickenCoop(coop1);
@@ -97,6 +108,11 @@ public class MainApplication {
         Pilot newPilot = new Pilot();
         newPilot.setName("Froilanda");
 
+ //Add Egg
+
+
+
+        return newFarmer;
 
     }
 }

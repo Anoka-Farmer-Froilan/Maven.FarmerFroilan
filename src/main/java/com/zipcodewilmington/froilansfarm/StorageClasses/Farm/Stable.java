@@ -8,7 +8,9 @@ import java.util.ArrayList;
 
 public class Stable extends Shelter<Horse> {
     ArrayList<Horse> newHorseArr;
-    public Stable(){}
+    public Stable(){
+        newHorseArr = new ArrayList<Horse>();
+    }
 
     public void feed(Horse horse, EarCorn earCorn){}
 

@@ -17,13 +17,18 @@ public class Egg extends Animal implements Produce {
         isEdible = true;
     }
 
-    @Override
+
     public void eat(int amount) {
 
-    }
+   }
 
     @Override
     public Edible yield() {
         return null;
+    }
+
+
+    public void eat(Edible edible, int amount) {
+
     }
 }

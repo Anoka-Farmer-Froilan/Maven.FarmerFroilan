@@ -9,7 +9,13 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Eat.Edible;
 public class CornStalk extends Crop<EarCorn> {
     @Override
     public Edible yield() {
-        return new EarCorn();
+        if(getFertilized()==true && getFertilized()==false){
+            setHarvestToTrue();
+            return new EarCorn();
+        } else {
+            return null;
+        }
+       // return new EarCorn();
     }
 
 }

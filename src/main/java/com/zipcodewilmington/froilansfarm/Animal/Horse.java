@@ -49,8 +49,12 @@ public class Horse extends Animal implements Rideable, Eater<Vegetable> {
 
     public boolean isRidden() { return ridden; }
 
-    @Override
     public void eat(int amount) {
+
+    }
+
+    @Override
+    public void eat(Edible edible, int amount) {
 
     }
 }
