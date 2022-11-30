@@ -1,5 +1,10 @@
 package com.zipcodewilmington.froilansfarm.Interfaces.Ride;
 
-public interface Rideable <T extends Rider>{
-    boolean mounted();
+import com.zipcodewilmington.froilansfarm.Animal.Person;
+import com.zipcodewilmington.froilansfarm.Animal.Pilot;
+
+public interface Rideable{
+    public void setRidden( Person person);
+
+    public boolean isRidden();
 }

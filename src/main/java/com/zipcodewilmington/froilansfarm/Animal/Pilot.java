@@ -1,25 +1,40 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
 import com.zipcodewilmington.froilansfarm.Interfaces.Eat.Eater;
+import com.zipcodewilmington.froilansfarm.Interfaces.Eat.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Ride.Aircraft;
 import com.zipcodewilmington.froilansfarm.Interfaces.Ride.Flyer;
+import com.zipcodewilmington.froilansfarm.Interfaces.Ride.Rideable;
+import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
 
-public class Pilot extends Person implements Flyer {
+public class Pilot extends Person {
 
-    public void pilot() {
+    public boolean mounted = false;
 
+    public Pilot(String name) {
+        super(name);
     }
 
-    public void mount(Aircraft type) {
-
+    public Pilot() {
     }
 
-    public void dismount(Aircraft type) {
-
+    public void eat(Edible edible) {
     }
 
     @Override
-    public void eat(Eater type) {
+    public void makeNoise() {
+        System.out.println("Wooo");
+    }
+
+    public void mount(Rideable ride) {
+        ride.setRidden(this);
+        CropDuster cd = (CropDuster) ride;
+        cd.fly();
+        mounted = true;
+    }
+
+    @Override
+    public void eat(int amount) {
 
     }
 }

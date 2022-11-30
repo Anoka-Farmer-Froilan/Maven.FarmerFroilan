@@ -1,28 +1,34 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
+import com.zipcodewilmington.froilansfarm.Crop.Crop;
+import com.zipcodewilmington.froilansfarm.Interfaces.Botanist;
 import com.zipcodewilmington.froilansfarm.Interfaces.Eat.Eater;
-import com.zipcodewilmington.froilansfarm.Interfaces.Ride.Operater;
+import com.zipcodewilmington.froilansfarm.Interfaces.Eat.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Ride.Rideable;
 import com.zipcodewilmington.froilansfarm.Interfaces.Ride.Rider;
 import com.zipcodewilmington.froilansfarm.StorageClasses.Farm.Farm;
-import com.zipcodewilmington.froilansfarm.Vehicle.Tractor;
+import com.zipcodewilmington.froilansfarm.StorageClasses.Field.CropRow;
 
-public class Farmer extends Person implements Rider {
+public class Farmer extends Person implements Botanist {
 
-    Farm newFarm;
-    public void addFarm(Farm f){
-        newFarm=f;
-    }
-    public void mount(Rideable type) {
+    public boolean mounted = false;
 
+    public Farmer(String name) {
+        super(name);
     }
 
-    public void dismount(Rideable type) {
+    public Farmer() {
 
     }
 
     @Override
-    public void eat(Eater type) {
+    public void eat() {
+
+    }
+
+    @Override
+    public void plantCrop(CropRow crprw, Crop crop) {
+        crprw.add(crop);
 
     }
 }
