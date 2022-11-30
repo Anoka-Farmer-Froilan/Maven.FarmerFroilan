@@ -71,4 +71,10 @@ public class Farmer extends Person implements Botanist {
     public int countChicken(){
         return newFarm.getChickenCount();
     }
+    public int countTomato(){ return newFarm.getTomatoCount();
+    }
+
+    public int countEarCorn() {
+        return newFarm.getEarCornCount();
+    }
 }

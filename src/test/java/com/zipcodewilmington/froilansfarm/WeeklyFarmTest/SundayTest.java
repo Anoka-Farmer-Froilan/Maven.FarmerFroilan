@@ -42,39 +42,35 @@ public class SundayTest {
 
         Farmer Froilan = MainApplication.plot();
         //
+
         Froilan.eat(new Tomato());
         Froilan.eat(new Tomato());
 
 
-        Assert.assertEquals(2,Froilan.countEgg());
+        Assert.assertEquals(0,Froilan.countTomato());
 
     }
-    public void froilanBreakfastTomatoTest() {
+    @Test
+    public void froilanBreakfastEarCornTest() {
 
-        Farmer Froilan = MainApplication.plot();
+        Farmer Froilanda = MainApplication.plot();
 
-        Froilan.eat(new EarCorn());
-
-        Froilan.eat(new Tomato());
-        Froilan.eat(new Tomato());
+        Froilanda.eat(new EarCorn());
 
 
-        Assert.assertEquals(2,Froilan.countEgg());
+
+        Assert.assertEquals(0,Froilanda.countEarCorn());
 
     }
         @Test
-        public void froilandaBreakfastTest() {
-            Pilot Froilanda = new Pilot("Froilanda");
+        public void froilandaBreakfastEggTest() {
+            Farmer Froilanda = MainApplication.plot();
 
-            Froilanda.eat(new EarCorn());
-            Froilanda.eat(new EarCorn());
-
-            Froilanda.eat(new Tomato());
 
             Froilanda.eat(new Egg());
             Froilanda.eat(new Egg());
 
-        //    Assert.assertTrue(Froilanda.eat());
+            Assert.assertEquals(0, Froilanda.countEgg());
         }
 
         @Test
