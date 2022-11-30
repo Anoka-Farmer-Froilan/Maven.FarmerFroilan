@@ -59,4 +59,8 @@ public class Chicken extends Animal implements Produce, Eater<Vegetable> {
 
     }
 
+    @Override
+    public void eat(Edible edible, int amount) {
+
+    }
 }

@@ -33,8 +33,12 @@ public class Pilot extends Person {
         mounted = true;
     }
 
-    @Override
     public void eat(int amount) {
+
+    }
+
+    @Override
+    public void eat(Edible edible, int amount) {
 
     }
 }
