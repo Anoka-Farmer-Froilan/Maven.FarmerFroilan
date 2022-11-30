@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
+import Food.EarCorn;
 import Food.Egg;
 import com.zipcodewilmington.froilansfarm.Animal.Chicken;
 import com.zipcodewilmington.froilansfarm.Animal.Farmer;
@@ -7,6 +8,7 @@ import com.zipcodewilmington.froilansfarm.Animal.Horse;
 import com.zipcodewilmington.froilansfarm.Animal.Pilot;
 import com.zipcodewilmington.froilansfarm.Crop.CornStalk;
 import com.zipcodewilmington.froilansfarm.Crop.Crop;
+import com.zipcodewilmington.froilansfarm.Crop.Tomato;
 import com.zipcodewilmington.froilansfarm.Crop.TomatoPlant;
 import com.zipcodewilmington.froilansfarm.StorageClasses.Farm.ChickenCoop;
 import com.zipcodewilmington.froilansfarm.StorageClasses.Farm.Farm;
@@ -27,7 +29,7 @@ public class MainApplication {
 //Froilan, a Farmer has a Farm
         newFarmer.setNewFarm(newFarm);
         newFarmer.setName("Froilan");
-
+         newFarmer.setName("Froilanda");
 
 //       a Farm consisting of
 //        1 Field of 5 CropRow.
@@ -41,6 +43,10 @@ public class MainApplication {
         newField.addCropRow(new Crop());
         newField.addCropRow(new Crop());
         newField.addCropRow(new Crop());
+        newField.addCropRow(new Tomato());
+        newField.addCropRow(new Tomato());
+        newField.addCropRow(new EarCorn());
+        newField.addCropRow(new EarCorn());
         //add field to the farm
         newFarm.addField(newField);
 //15 Chicken across 4 ChickenCoop

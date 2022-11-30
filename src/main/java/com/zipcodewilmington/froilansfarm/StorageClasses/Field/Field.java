@@ -14,10 +14,14 @@ import java.util.List;
 
 public class Field <T> extends ArrayList<T> {
     private ArrayList<Crop> field;
-
+    private ArrayList<Tomato> tomatoFieldArr;
+    private ArrayList<EarCorn> earCornArr;
     public Field(){
         field = new ArrayList<Crop>();
+        tomatoFieldArr = new ArrayList<Tomato>();
+        earCornArr = new ArrayList<EarCorn>();
     }
+
     public int countTomato(){
         int count=0;
         for(int i=0; i<field.size(); i++){
@@ -39,7 +43,9 @@ public class Field <T> extends ArrayList<T> {
     public void addCropRow(Crop c){
         field.add(c);
     }
-
+//    public void addTomato(Tomato t){
+//        tomatoFieldArr.add(t);
+//    }
     public Edible getFood(Edible c){
         if(c instanceof EarCorn){
             for(int i=0; i<field.size(); i++){

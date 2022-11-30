@@ -11,22 +11,26 @@ import com.zipcodewilmington.froilansfarm.Vehicle.Vehicle;
 
 import java.util.ArrayList;
 
-public class Farm{
+public class Farm {
 
     ArrayList<Stable> newStableArr;
     ArrayList<ChickenCoop> newChickenCoopArr;
     ArrayList<Field> newFieldArr;
     ArrayList<Vehicle> newVehicleArr;
 
+    ArrayList<Field> newTomatoArr;
+    ArrayList<Field> newEarCornArr;
+
     private FarmHouse newFarmHouse;
 
     public Farm() {
         newFieldArr = new ArrayList<Field>();
-        newChickenCoopArr=new ArrayList<ChickenCoop>();
+        newChickenCoopArr = new ArrayList<ChickenCoop>();
         newStableArr = new ArrayList<Stable>();
-        newVehicleArr= new ArrayList<Vehicle>();
+        newVehicleArr = new ArrayList<Vehicle>();
+        newTomatoArr = new ArrayList<Field>();
+        newEarCornArr = new ArrayList<Field>();
     }
-
 
 
     public FarmHouse getNewFarmHouse() {
@@ -36,63 +40,98 @@ public class Farm{
     public void setNewFarmHouse(FarmHouse newFarmHouse) {
         this.newFarmHouse = newFarmHouse;
     }
-    public void addStable(Stable s){
+
+    public void addStable(Stable s) {
         newStableArr.add(s);
     }
-    public void addChickenCoop(ChickenCoop s){
+
+    public void addChickenCoop(ChickenCoop s) {
         newChickenCoopArr.add(s);
     }
-    public void addField(Field s){
+
+    public void addField(Field s) {
         newFieldArr.add(s);
     }
-    public void addVehicle(Vehicle s){
+
+    public void addVehicle(Vehicle s) {
         newVehicleArr.add(s);
     }
-    public void removeChicken(){
-        if(newChickenCoopArr.size()>=0) {
+
+    public void addTomato(Field s) {
+        newTomatoArr.add(s);
+    }
+
+    public void addEarCorn(Field s) {
+        newEarCornArr.add(s);
+    }
+
+    public void removeChicken() {
+        if (newChickenCoopArr.size() >= 0) {
             newChickenCoopArr.get(newChickenCoopArr.size() - 1).removeChicken();
         }
     }
-    public void removeEgg(){
-        for(int i =0; i<newChickenCoopArr.size(); i++){
-            if(newChickenCoopArr.get(i).countEgg() > 0) {
+
+    public void removeEgg() {
+        for (int i = 0; i < newChickenCoopArr.size(); i++) {
+            if (newChickenCoopArr.get(i).countEgg() > 0) {
                 newChickenCoopArr.get(i).removeEgg();
             }
         }
 
     }
-    public void removeEarCorn(){
+
+    public void removeEarCorn() {
         Edible temp;
-        for(int i=0; i<newFieldArr.size(); i++){
-            for(int j=0; j<newFieldArr.get(i).size(); j++){
-                if(newFieldArr.get(i).get(j) instanceof CornStalk){
-                   temp = newFieldArr.get(i).getFood(new EarCorn());
+        for (int i = 0; i < newFieldArr.size(); i++) {
+            for (int j = 0; j < newFieldArr.get(i).size(); j++) {
+                if (newFieldArr.get(i).get(j) instanceof CornStalk) {
+                    temp = newFieldArr.get(i).getFood(new EarCorn());
                 }
             }
         }
     }
-    public void removeTomato(){
+
+    public void removeTomato() {
         Edible temp;
-        for(int i=0; i<newFieldArr.size(); i++){
-            for(int j=0; j<newFieldArr.get(i).size(); j++){
-                if(newFieldArr.get(i).get(j) instanceof TomatoPlant){
+        for (int i = 0; i < newFieldArr.size(); i++) {
+            for (int j = 0; j < newFieldArr.get(i).size(); j++) {
+                if (newFieldArr.get(i).get(j) instanceof TomatoPlant) {
                     temp = newFieldArr.get(i).getFood(new Tomato());
                 }
             }
         }
     }
-    public int getChickenCount(){
-        int count =0;
-        for(int i=0; i<newChickenCoopArr.size(); i++){
-            count+=newChickenCoopArr.get(i).countChicken();
+
+    public int getChickenCount() {
+        int count = 0;
+        for (int i = 0; i < newChickenCoopArr.size(); i++) {
+            count += newChickenCoopArr.get(i).countChicken();
         }
         return count;
     }
-    public int getEggCount(){
-        int count =0;
-        for(int i=0; i<newChickenCoopArr.size(); i++){
-            count+=newChickenCoopArr.get(i).countEgg();
+
+    public int getEggCount() {
+        int count = 0;
+        for (int i = 0; i < newChickenCoopArr.size(); i++) {
+            count += newChickenCoopArr.get(i).countEgg();
         }
         return count;
     }
+
+    public int getTomatoCount() {
+        int count = 0;
+        for (int i = 0; i < newTomatoArr.size(); i++) {
+            count += newTomatoArr.get(i).countTomato();
+        }
+        return count;
+    }
+
+    public int getEarCornCount() {
+        int count = 0;
+        for (int i = 0; i < newEarCornArr.size(); i++) {
+            count += newEarCornArr.get(i).countEarCorn();
+        }
+        return count;
+    }
+
 }
