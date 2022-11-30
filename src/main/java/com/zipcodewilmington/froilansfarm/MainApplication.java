@@ -6,7 +6,6 @@ import com.zipcodewilmington.froilansfarm.Animal.Horse;
 import com.zipcodewilmington.froilansfarm.Animal.Pilot;
 import com.zipcodewilmington.froilansfarm.Crop.CornStalk;
 import com.zipcodewilmington.froilansfarm.Crop.Crop;
-import com.zipcodewilmington.froilansfarm.Crop.EarCorn;
 import com.zipcodewilmington.froilansfarm.Crop.TomatoPlant;
 import com.zipcodewilmington.froilansfarm.StorageClasses.Farm.ChickenCoop;
 import com.zipcodewilmington.froilansfarm.StorageClasses.Farm.Farm;
@@ -14,7 +13,6 @@ import com.zipcodewilmington.froilansfarm.StorageClasses.Farm.Stable;
 import com.zipcodewilmington.froilansfarm.StorageClasses.Field.Field;
 import com.zipcodewilmington.froilansfarm.Vehicle.Aircraft;
 import com.zipcodewilmington.froilansfarm.Vehicle.FarmVehicle;
-import com.zipcodewilmington.froilansfarm.Vehicle.Vehicle;
 
 /**
  * Created by leon on 2/26/18.

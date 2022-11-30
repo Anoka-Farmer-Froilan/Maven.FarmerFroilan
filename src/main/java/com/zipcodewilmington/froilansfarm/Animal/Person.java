@@ -5,6 +5,8 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Eat.Edible;
 
 public abstract class Person extends Animal{
     private String name;
+    public boolean fed = false;
+    public Boolean mounted = false;
 
     public Person(String name) {
         this.name = name;
@@ -24,4 +26,11 @@ public abstract class Person extends Animal{
     public void eat(Edible type) {
     }
 
+    public void dismount() {
+        mounted = false;
+    }
+
+    public boolean isMounted() {
+        return mounted;
+    }
 }

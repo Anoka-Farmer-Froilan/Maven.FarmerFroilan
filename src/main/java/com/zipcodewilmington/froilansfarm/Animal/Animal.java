@@ -1,16 +1,36 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
 import com.zipcodewilmington.froilansfarm.Interfaces.Eat.Eater;
+import com.zipcodewilmington.froilansfarm.Interfaces.Eat.Vegetable;
 import com.zipcodewilmington.froilansfarm.Interfaces.NoiseMaker;
 
-public abstract class Animal implements NoiseMaker, Eater {
+public abstract class Animal implements Eater<Vegetable>,NoiseMaker {
 
-//    boolean hasEaten;
+    public boolean fed = false;
+
+    public String name;
+
+    public Animal(String name) {
+        this.name = name;
+    }
+    public Animal() {
+        name = "";
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
     public void makeNoise() {
 
     }
-
-    public void eat(Eater type) {
-
+    public boolean isFed() {
+        return fed;
     }
+
 }

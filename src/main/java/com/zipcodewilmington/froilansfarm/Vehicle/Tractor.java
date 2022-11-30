@@ -1,24 +1,44 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
+import com.zipcodewilmington.froilansfarm.Animal.Person;
 import com.zipcodewilmington.froilansfarm.Crop.Crop;
-import com.zipcodewilmington.froilansfarm.Interfaces.Ride.Equipment;
-import com.zipcodewilmington.froilansfarm.Interfaces.Ride.Rideable;
-import com.zipcodewilmington.froilansfarm.StorageClasses.Farm.Farm;
+import com.zipcodewilmington.froilansfarm.Interfaces.Eat.Edible;
 
-public class Tractor extends FarmVehicle implements Rideable{
+public class Tractor extends Vehicle{
 
-    public boolean mounted() {
-        return false;
+    boolean vehicleMounted = false;
+
+    public Tractor() {
+        super("");
     }
 
-    //Tractor can harvest a Crop
-    public boolean harvest(){
-        return false;
+    public Tractor(String name) {
+        super(name);
     }
 
-    // Tractor is a FarmVehicle, Override the methods from FarmWehicle;
-    public boolean operate(Farm farm1){
-        return false;
+    public Edible harvest(Crop crop) {
+        if (vehicleMounted == true){
+            return crop.yield();
+        }
+        return null;
     }
+
+    @Override
+    public void makeNoise() {
+        System.out.println("ooomm ooom");
+
+    }
+
+    @Override
+    public void setRidden(Person person) {
+        if(person.isMounted() == false){
+            vehicleMounted = true;
+        } else {
+            vehicleMounted = false;
+        }
+    }
+
+    @Override
+    public boolean isRidden() { return vehicleMounted; }
 
 }

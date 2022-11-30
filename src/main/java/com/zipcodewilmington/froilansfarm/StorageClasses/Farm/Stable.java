@@ -1,7 +1,7 @@
 package com.zipcodewilmington.froilansfarm.StorageClasses.Farm;
 
 import com.zipcodewilmington.froilansfarm.Animal.Horse;
-import com.zipcodewilmington.froilansfarm.Crop.EarCorn;
+import Food.EarCorn;
 import com.zipcodewilmington.froilansfarm.StorageClasses.Shelter;
 
 import java.util.ArrayList;

@@ -7,7 +7,6 @@ public class Aircraft extends Vehicle {
         System.out.println("Whirr, Whirr, Whirr");
     }
 
-    @Override
     public boolean mounted() {
         return false;
     }
