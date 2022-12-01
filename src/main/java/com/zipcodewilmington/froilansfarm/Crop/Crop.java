@@ -46,6 +46,7 @@ public class Crop <T> implements Produce {
 
     @Override
     public Edible yield() {
+        hasBeenHarvested=true;
         return null;
     }
 
