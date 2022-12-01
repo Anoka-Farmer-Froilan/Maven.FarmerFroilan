@@ -18,8 +18,8 @@ public class Farm {
     ArrayList<Field> newFieldArr;
     ArrayList<Vehicle> newVehicleArr;
 
-    ArrayList<Field> newTomatoArr;
-    ArrayList<Field> newEarCornArr;
+//    ArrayList<Field> newTomatoArr;
+//    ArrayList<Field> newEarCornArr;
 
     private FarmHouse newFarmHouse;
 
@@ -28,8 +28,8 @@ public class Farm {
         newChickenCoopArr = new ArrayList<ChickenCoop>();
         newStableArr = new ArrayList<Stable>();
         newVehicleArr = new ArrayList<Vehicle>();
-        newTomatoArr = new ArrayList<Field>();
-        newEarCornArr = new ArrayList<Field>();
+//        newTomatoArr = new ArrayList<Field>();
+//        newEarCornArr = new ArrayList<Field>();
     }
 
 
@@ -57,13 +57,13 @@ public class Farm {
         newVehicleArr.add(s);
     }
 
-    public void addTomato(Field s) {
-        newTomatoArr.add(s);
-    }
-
-    public void addEarCorn(Field s) {
-        newEarCornArr.add(s);
-    }
+//    public void addTomato(Field s) {
+//        newTomatoArr.add(s);
+//    }
+//
+//    public void addEarCorn(Field s) {
+//        newEarCornArr.add(s);
+//    }
 
     public void removeChicken() {
         if (newChickenCoopArr.size() >= 0) {
@@ -120,16 +120,24 @@ public class Farm {
 
     public int getTomatoCount() {
         int count = 0;
-        for (int i = 0; i < newTomatoArr.size(); i++) {
-            count += newTomatoArr.get(i).countTomato();
+        for (int i = 0; i < newFieldArr.size(); i++) {
+
+
+                count += newFieldArr.get(i).countTomato();
+
+
         }
         return count;
     }
 
     public int getEarCornCount() {
         int count = 0;
-        for (int i = 0; i < newEarCornArr.size(); i++) {
-            count += newEarCornArr.get(i).countEarCorn();
+        for (int i = 0; i < newFieldArr.size(); i++) {
+            for (int j = 0; j < newFieldArr.get(i).size(); j++) {
+                if (newFieldArr.get(i).get(j) instanceof CornStalk) {
+                    count++;
+                }
+            }
         }
         return count;
     }

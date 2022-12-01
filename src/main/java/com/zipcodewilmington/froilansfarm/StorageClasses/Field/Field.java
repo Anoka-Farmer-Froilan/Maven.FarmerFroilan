@@ -25,7 +25,7 @@ public class Field <T> extends ArrayList<T> {
     public int countTomato(){
         int count=0;
         for(int i=0; i<field.size(); i++){
-            if(field.get(i) instanceof TomatoPlant){
+            if((field.get(i) instanceof TomatoPlant) && !field.get(i).getHarvested()){
                 count++;
             }
         }

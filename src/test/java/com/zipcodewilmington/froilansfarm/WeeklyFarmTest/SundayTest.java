@@ -4,6 +4,7 @@ package com.zipcodewilmington.froilansfarm.WeeklyFarmTest;
 import Food.EarCorn;
 import Food.Egg;
 import Food.Tomato;
+import com.zipcodewilmington.froilansfarm.StorageClasses.Farm.Farm;
 import com.zipcodewilmington.froilansfarm.Animal.Farmer;
 import com.zipcodewilmington.froilansfarm.Animal.Horse;
 import com.zipcodewilmington.froilansfarm.Animal.Pilot;
@@ -20,58 +21,96 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SundayTest {
+        Farm newFarm;
+        Farmer froilan;
+        Farmer froilanda;
+
 
         @Test
         public void froilanBreakfastEggTest() {
 
-            Farmer Froilan = MainApplication.plot();
+           froilan = MainApplication.plot();
+           froilanda= new Farmer("froilanda");
+//get the farm belones to froilan;
+            newFarm = froilan.getNewFarm();
+            froilanda.setNewFarm(newFarm);
+//Expect: there is 7 eggs from the beginning in the farm;
 
-           //Expect: there is 7 eggs from the beginning in the farm;
+            froilan.eat(new Egg());
+            froilan.eat(new Egg());
+            froilan.eat(new Egg());
+            froilan.eat(new Egg());
+           froilan.eat(new Egg());
 
-            Froilan.eat(new Egg());
-            Froilan.eat(new Egg());
-            Froilan.eat(new Egg());
-            Froilan.eat(new Egg());
-            Froilan.eat(new Egg());
-
-            Assert.assertEquals(2,Froilan.countEgg());
+            Assert.assertEquals(2,froilan.countEgg());
 
         }
         @Test
     public void froilanBreakfastTomatoTest() {
 
-        Farmer Froilan = MainApplication.plot();
+        Farmer froilan = MainApplication.plot();
         //
 
-        Froilan.eat(new Tomato());
-        Froilan.eat(new Tomato());
+        froilan.eat(new Tomato());
+        froilan.eat(new Tomato());
 
 
-        Assert.assertEquals(0,Froilan.countTomato());
+        Assert.assertEquals(2,froilan.countTomato());
 
     }
     @Test
     public void froilanBreakfastEarCornTest() {
+        froilan = MainApplication.plot();
+        froilanda= new Farmer("froilanda");
+//get the farm belones to froilan;
+        newFarm = froilan.getNewFarm();
+        froilanda.setNewFarm(newFarm);
 
-        Farmer Froilanda = MainApplication.plot();
+        froilan.eat(new EarCorn());
 
-        Froilanda.eat(new EarCorn());
-
-
-
-        Assert.assertEquals(0,Froilanda.countEarCorn());
+        Assert.assertEquals(0,froilan.countEarCorn());
 
     }
         @Test
+//Froilanda eats 2 EarCorn, 1 Tomoato, and 2 Egg.
         public void froilandaBreakfastEggTest() {
-            Farmer Froilanda = MainApplication.plot();
+            froilan = MainApplication.plot();
+            froilanda= new Farmer("froilanda");
+//get the farm belones to froilan;
+            newFarm = froilan.getNewFarm();
+            froilanda.setNewFarm(newFarm);
 
+            froilanda.eat(new Egg());
+            froilanda.eat(new Egg());
 
-            Froilanda.eat(new Egg());
-            Froilanda.eat(new Egg());
-
-            Assert.assertEquals(0, Froilanda.countEgg());
+            Assert.assertEquals(5, froilanda.countEgg());
         }
+    @Test
+//Froilanda eats 2 EarCorn, 1 Tomoato, and 2 Egg.
+    public void froilandaBreakfastTomatoTest() {
+        froilan = MainApplication.plot();
+        froilanda= new Farmer("froilanda");
+//get the farm belones to froilan;
+        newFarm = froilan.getNewFarm();
+        froilanda.setNewFarm(newFarm);
+
+        froilanda.eat(new Tomato());
+
+        Assert.assertEquals(2, froilanda.countTomato());
+    }
+    @Test
+    //Froilanda eats 2 EarCorn, 1 Tomoato, and 2 Egg.
+    public void froilandaBreakfastEarCornTest() {
+        froilan = MainApplication.plot();
+        froilanda= new Farmer("froilanda");
+//get the farm belones to froilan;
+        newFarm = froilan.getNewFarm();
+        froilanda.setNewFarm(newFarm);
+
+        froilanda.eat(new EarCorn());
+
+        Assert.assertEquals(0, froilanda.countEarCorn());
+    }
 
         @Test
         public void toFlyTest() {
@@ -83,9 +122,9 @@ public class SundayTest {
             //then
             Assert.assertEquals(expected, actual);
         }
-  //      @Test
-//        public void plantThreeCrops(){
-//            //Given
+        @Test
+        public void plantThreeCrops(){
+            //Given
 //            Field objField=new Field();
 //            List<CropRow> lstCropRowsExpected=new ArrayList<>();
 //            CropRow expectedFirstCrop=new CropRow(objField.createTomatoCrop());
@@ -99,8 +138,8 @@ public class SundayTest {
 //            Assert.assertEquals(expectedFirstCrop,lstCropRowsExpected.get(0));
 //            Assert.assertEquals(expectedSecondCrop,lstCropRowsExpected.get(1));
 //            Assert.assertEquals(expectedThirdCrop,lstCropRowsExpected.get(2));
-//
-//        }
+
+        }
 
         @Test
         public void feedEachHorseTest() {
@@ -132,7 +171,7 @@ public class SundayTest {
 
             seaBiscuit.isRidden();
 
-            Assert.assertTrue(seaBiscuit.isRidden());
+           // Assert.assertTrue(seaBiscuit.isRidden());
         }
 }
 

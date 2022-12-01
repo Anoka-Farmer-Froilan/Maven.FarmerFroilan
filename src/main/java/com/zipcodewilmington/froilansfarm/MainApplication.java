@@ -39,14 +39,14 @@ public class MainApplication {
 
         Field newField = new Field();
         newField.addCropRow(new CornStalk());
+        newField.addCropRow(new CornStalk());
         newField.addCropRow(new TomatoPlant());
+        newField.addCropRow(new TomatoPlant());
+
         newField.addCropRow(new Crop());
         newField.addCropRow(new Crop());
         newField.addCropRow(new Crop());
-        newField.addCropRow(new Tomato());
-        newField.addCropRow(new Tomato());
-        newField.addCropRow(new EarCorn());
-        newField.addCropRow(new EarCorn());
+
         //add field to the farm
         newFarm.addField(newField);
 //15 Chicken across 4 ChickenCoop
